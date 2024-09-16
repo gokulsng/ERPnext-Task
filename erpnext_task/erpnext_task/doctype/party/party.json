@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-13 22:22:51.032861",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "posting_date",
+  "status",
+  "employee_1",
+  "employee_name",
+  "column_break_lf9n",
+  "designation",
+  "department",
+  "retire_on",
+  "section_break_gbuu",
+  "party_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fetch_from": "employee_1.designation",
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "fetch_from": "employee_1.department",
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
+  },
+  {
+   "fieldname": "retire_on",
+   "fieldtype": "Date",
+   "label": "Retire On"
+  },
+  {
+   "fieldname": "party_details",
+   "fieldtype": "Table",
+   "label": "Party Details",
+   "options": "Party Details"
+  },
+  {
+   "fetch_from": "employee_1.employee",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name"
+  },
+  {
+   "fieldname": "column_break_lf9n",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_gbuu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Attend Party\nNot Attend Party"
+  },
+  {
+   "fieldname": "employee_1",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-15 22:47:06.126337",
+ "modified_by": "Administrator",
+ "module": "Erpnext Task",
+ "name": "Party",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
